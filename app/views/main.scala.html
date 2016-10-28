@@ -1,0 +1,54 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")"/>
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.css")"/>
+        <link rel="stylesheet" href="http://cdn.ims.io/design/css/1.0.0-beta.2/apollo.min.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="http://cdn.ims.io/design/js/1.0.0-beta.2/apollo.js"></script>
+        <script src="@routes.Assets.versioned("javascripts/jquery-2.2.0.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+    <!--<nav class="navbar navbar-primary navbar-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"></polygon><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"></polygon></svg>
+      iValidate
+    </a>
+    <ul class="navbar-links">
+      <li class="navbar-item dropdown">
+        <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contracts</a>
+        <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+          <li><a href="#0">Contract Manager</a></li>
+          <li><a href="#0">Contract Entities</a></li>
+        </ul>
+      </li><li class="navbar-item">
+        <a href="prodsearch.html">Products</a>
+      </li>
+      <li class="navbar-item">
+        <a href="pharmacies.html">Pharmacies</a>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clients</a>
+        <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+          <li><a href="#0">Client Tracker</a></li>
+          <li><a href="clientskel.html">Client Skeleton</a></li>
+        </ul>
+      </li>
+    <li class="navbar-item">
+        <a href="#0">Formulary</a>
+      </li>
+
+    <li class="navbar-item">
+        <a href="#0">Duplication</a>
+      </li>
+    </ul>
+  </div>
+</nav>-->
+        @content
+    </body>
+</html>
