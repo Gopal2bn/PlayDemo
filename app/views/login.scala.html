@@ -1,18 +1,10 @@
 @(login: Form[LoginForm])(implicit messages: Messages)
 
 @import helper._
-@import views.MyHelpers._
-
+@import views.Helpers.MyHelpers._
 @main("Welcome to Play") {
-	<script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
-
-	<ul id="persons"></ul>
-
   @form(routes.LoginController.login()) {
-		@inputText(login("username"))
-		@inputText(login("password"))
-
-@inputText(login("email"), '_label -> "E-mail", '_id -> "email", 'placeholder -> "Enter your email address")(emailinput, implicitly[Messages])
+@inputText(login("username"),'_label -> "User Name")(customFormInputText, implicitly[Messages])
 		<div class="buttons">
 			<input type="submit" value="Login"/>
 		</div>
