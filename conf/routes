@@ -8,6 +8,9 @@ GET     /hello/:name/:age                controllers.HomeController.hello(name :
 POST    /person                     controllers.PersonController.addPerson
 GET     /persons                    controllers.PersonController.getPersons
 
+GET     /login                   controllers.LoginController.login
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 GET 	/contracts  		    controllers.Assets.at(path="/public", file="html/contracts.html")
