@@ -1,0 +1,11 @@
+@(elements: views.html.helper.FieldElements)
+<fieldset class="form-group">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 text-md-right">
+            <label class="control-label" for="@elements.field.id">@elements.label</label>
+        </div>
+        <div class="col-xs-12 col-md-8">
+            <input class="form-control" id="@elements.field.id" type="text" name="@elements.field.name" value="@elements.field.value" />
+        </div>
+    </div>
+</fieldset>

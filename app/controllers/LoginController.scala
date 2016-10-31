@@ -14,8 +14,8 @@ import scala.concurrent.ExecutionContext
   * Created y gopal on 10/29/16.
   */
 @Singleton
-class LoginController @Inject() (val messagesApi: MessagesApi)
-(implicit ec: ExecutionContext) extends Controller with I18nSupport{
+class LoginController @Inject()(val messagesApi: MessagesApi)
+                               (implicit ec: ExecutionContext) extends Controller with I18nSupport {
 
   /**
     * The mapping for the person form.
@@ -24,7 +24,7 @@ class LoginController @Inject() (val messagesApi: MessagesApi)
     mapping(
       "username" -> nonEmptyText,
       "password" -> nonEmptyText,
-      "email"-> nonEmptyText
+      "email" -> nonEmptyText
     )(LoginForm.apply)(LoginForm.unapply)
   }
 
@@ -37,4 +37,4 @@ class LoginController @Inject() (val messagesApi: MessagesApi)
 
 }
 
-case class LoginForm(username: String, password:String,email:String)
+case class LoginForm(username: String, password: String, email: String)

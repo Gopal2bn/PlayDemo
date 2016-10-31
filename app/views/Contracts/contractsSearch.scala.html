@@ -1,0 +1,33 @@
+
+@(searchForm: Form[SearchCriteriaForm])(implicit messages: Messages)
+
+@import helper._
+@import views.Helpers.MyHelpers._
+
+@main("Welcome to Play") {
+<div class="card-header" id="accordion-head-1" role="tab">
+    <h3 class="card-title" data-toggle="collapse" data-target="#accordion-sect-1" aria-expanded="true" aria-controls="accordion-sect-1">Hide/Show</h3>
+</div>
+<div class="card-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
+</div>
+@form(routes.ContractsController.search1()) {
+<fieldset class="form-group">
+    <div class="row">
+        @inputText(searchForm("contractName"),'_label -> "Contract Name")(searchInputTextField1, implicitly[Messages])
+        @inputText(searchForm("contractEntity"),'_label -> "Contract Entity")(searchInputTextField1, implicitly[Messages])
+        @inputText(searchForm("version"),'_label -> "Version")(searchInputTextField1, implicitly[Messages])
+    </div>
+</fieldset>
+<fieldset class="form-group">
+    <div class="row">
+        @inputText(searchForm("contractID"),'_label -> "Contract ID")(searchInputTextField1, implicitly[Messages])
+        @inputText(searchForm("contractType"),'_label -> "Contract Type")(searchInputTextField1, implicitly[Messages])
+        @inputText(searchForm("catergory"),'_label -> "Contract Category")(searchInputTextField1, implicitly[Messages])
+    </div>
+</fieldset>
+
+<div class="col-xs-3 col-md-6">
+    <a class="btn btn-primary" type="submit" >Search</a>
+</div>
+}
+}

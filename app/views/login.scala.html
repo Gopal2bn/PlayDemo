@@ -3,10 +3,10 @@
 @import helper._
 @import views.Helpers.MyHelpers._
 @main("Welcome to Play") {
-  @form(routes.LoginController.login()) {
+@form(routes.LoginController.login()) {
 @inputText(login("username"),'_label -> "User Name")(customFormInputText, implicitly[Messages])
-		<div class="buttons">
-			<input type="submit" value="Login"/>
-		</div>
-	}
+<div class="buttons">
+    <input type="submit" value="Login"/>
+</div>
+}
 }
