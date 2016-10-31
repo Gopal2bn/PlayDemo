@@ -1,0 +1,9 @@
+@(elements: views.html.helper.FieldElements)
+
+<div class="col-xs-1 col-md-1 text-md-right">
+    <label class="control-label" for="@elements.field.id">@elements.label</label>
+</div>
+<div class="col-xs-2">
+    <input class="form-control" id="@elements.field.id" type="text" name="@elements.field.name"
+           value="@elements.field.value"/>
+</div>

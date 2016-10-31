@@ -1,7 +1,7 @@
 @(searchForm: Form[SearchCriteriaForm])(implicit messages: Messages)
 
 @import helper._
-@import views.Helpers.MyHelpers._
+@import views.helpers.MyHelpers._
 
 @main("Welcome to Play") {
 <div class="card-header" id="accordion-head-1" role="tab">
@@ -14,9 +14,10 @@
 <fieldset class="form-group">
     <div class="row">
         @inputText(searchForm("contractName"),'_label -> "Contract Name")(searchInputTextField1, implicitly[Messages])
-        @inputText(searchForm("contractEntity"),'_label -> "Contract Entity")(searchInputTextField1,
-        implicitly[Messages])
         @inputText(searchForm("version"),'_label -> "Version")(searchInputTextField1, implicitly[Messages])
+        @select(field = searchForm("contractEntity"),
+        options = options( "" -> "Default", "brown" -> "brown", "black" -> "black", "blue" -> "Blue" ),
+        args = '_label -> "Choose a eye color" )(searchDropdownField1,implicitly[Messages])
     </div>
 </fieldset>
 <fieldset class="form-group">

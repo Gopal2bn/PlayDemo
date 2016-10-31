@@ -1,7 +1,7 @@
 @(login: Form[LoginForm])(implicit messages: Messages)
 
 @import helper._
-@import views.Helpers.MyHelpers._
+@import views.helpers.MyHelpers._
 @main("Welcome to Play") {
 @form(routes.LoginController.login()) {
 @inputText(login("username"),'_label -> "User Name")(customFormInputText, implicitly[Messages])

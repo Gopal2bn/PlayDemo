@@ -39,12 +39,12 @@ class ContractsController @Inject()(val messagesApi: MessagesApi)
     * The index action.
     */
   def search = Action {
-    Ok(views.html.Contracts.contractsSearch(searchCriteriaForm))
+    Ok(views.html.contracts.contractsSearch(searchCriteriaForm))
   }
 
   def search1 = Action { implicit request =>
     searchCriteriaForm.bindFromRequest.fold(
-      errors => BadRequest(views.html.Contracts.contractsSearch(searchCriteriaForm)),
+      errors => BadRequest(views.html.contracts.contractsSearch(searchCriteriaForm)),
       label => {
         Redirect(routes.ContractsController.search())
       }
