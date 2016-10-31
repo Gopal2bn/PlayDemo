@@ -1,9 +1,9 @@
 @(elements: views.html.helper.FieldElements)
-
+<div class="col-xs-1 col-md-2 text-md-right">
+    <label class="form-label" for="@elements.field.name">@elements.label</label>
+</div>
 <div class="col-xs-2">
-<select class="form-control" name="select-position">
-    <option>Caremark MCO</option>
-    <option>Express Scripts MCO</option>
-    <option>Cigna MMA</option>
+<select class="form-control" name="@elements.field.name" id="@elements.field.name">
+    options = options(UtilityHelper.contractEntityList)
 </select>
 </div>

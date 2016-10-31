@@ -20,3 +20,15 @@ searchInputTextField.scala
 @select( field = searchForm("contractEntity"),
         options = options( "" -> "Default", "brown" -> "brown", "black" -> "black", "blue" -> "Blue" ),
         args = '_label -> "Choose a eye color" )
+
+UtilityHelper.contractEntityList
+
+@(elements: views.html.helper.FieldElements,optionValues:Seq[(String,String)])
+<div class="col-xs-1 col-md-2 text-md-right">
+    <label class="form-label" for="@elements.field.id">@elements.label</label>
+</div>
+<div class="col-xs-2">
+<select class="form-control" name="@elements.field.name">
+    options = options(optionValues)
+</select>
+</div>

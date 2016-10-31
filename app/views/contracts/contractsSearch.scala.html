@@ -2,6 +2,7 @@
 
 @import helper._
 @import views.helpers.MyHelpers._
+@import applicationlayer._
 
 @main("Welcome to Play") {
 <div class="card-header" id="accordion-head-1" role="tab">
@@ -16,8 +17,7 @@
         @inputText(searchForm("contractName"),'_label -> "Contract Name")(searchInputTextField1, implicitly[Messages])
         @inputText(searchForm("version"),'_label -> "Version")(searchInputTextField1, implicitly[Messages])
         @select(field = searchForm("contractEntity"),
-        options = options( "" -> "Default", "brown" -> "brown", "black" -> "black", "blue" -> "Blue" ),
-        args = '_label -> "Choose a eye color" )(searchDropdownField1,implicitly[Messages])
+        '_label -> "Contract Entity" )(searchDropdownField1,implicitly[Messages])
     </div>
 </fieldset>
 <fieldset class="form-group">
