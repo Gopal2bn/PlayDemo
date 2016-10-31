@@ -2,7 +2,7 @@ package views.Helpers
 
 import views.html.helper._
 
-import views.html.Helpers.{customFormInputTextField, myInputBox,searchInputTextField}
+import views.html.Helpers.{customFormInputTextField, myInputBox, searchInputTextField}
 
 /**
   * Created by gopal on 10/30/16.
