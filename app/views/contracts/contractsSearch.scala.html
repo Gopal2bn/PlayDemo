@@ -1,8 +1,9 @@
 @(searchForm: Form[SearchCriteriaForm])(implicit messages: Messages)
 
 @import helper._
-@import views.helpers.MyHelpers._
+@import views.html.helpers._
 @import applicationlayer._
+
 
 @main("Welcome to Play") {
 <div class="card-header" id="accordion-head-1" role="tab">
@@ -19,6 +20,11 @@
         @select(field = searchForm("contractEntity"),
         options = UtilityHelper.contractEntityList,
         '_label -> "Contract Entity" )(searchDropdownField1,implicitly[Messages])
+        @searchSelectField(searchForm("contractEntity"),
+        label = "Contract Entity",
+        optionMap = UtilityHelper.contractEntityList,
+        isMultiple = false,
+        help = "Select Contract Entity. (required)")
     </div>
 </fieldset>
 <fieldset class="form-group">
