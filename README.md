@@ -32,3 +32,17 @@ UtilityHelper.contractEntityList
     options = options(optionValues)
 </select>
 </div>
+
+https://www.playframework.com/documentation/2.5.x/ScalaTemplates
+
+
+        @for(product <- UtilityHelper.contractEntityList) {
+       <option value="@product"/>
+        }
+@options = options(UtilityHelper.contractEntityList)
+
+working
+
+        @for(ce <- UtilityHelper.contractEntityList) {
+       <option value="@ce">@ce</option>
+        }

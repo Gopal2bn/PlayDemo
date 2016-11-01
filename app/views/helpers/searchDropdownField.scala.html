@@ -1,9 +1,12 @@
 @(elements: views.html.helper.FieldElements)
+@import applicationlayer._
 <div class="col-xs-1 col-md-2 text-md-right">
     <label class="form-label" for="@elements.field.name">@elements.label</label>
 </div>
 <div class="col-xs-2">
-<select class="form-control" name="@elements.field.name" id="@elements.field.name">
-    options = options(UtilityHelper.contractEntityList)
+<select class="form-control" name="@elements.field.name">
+        @for(ce <- UtilityHelper.contractEntityList) {
+       <option value="@ce._1">@ce._2</option>
+        }
 </select>
 </div>

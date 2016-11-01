@@ -17,6 +17,7 @@
         @inputText(searchForm("contractName"),'_label -> "Contract Name")(searchInputTextField1, implicitly[Messages])
         @inputText(searchForm("version"),'_label -> "Version")(searchInputTextField1, implicitly[Messages])
         @select(field = searchForm("contractEntity"),
+        options = UtilityHelper.contractEntityList,
         '_label -> "Contract Entity" )(searchDropdownField1,implicitly[Messages])
     </div>
 </fieldset>
